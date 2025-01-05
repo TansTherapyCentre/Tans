@@ -6,7 +6,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
+  line-height: 1.5;
   padding-top: 56px; /* Menyesuaikan dengan navbar fixed-top */
 }
 
@@ -35,7 +35,7 @@ body {
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ), /* Overlay transparan untuk teks */
-    url("https://i.pinimg.com/736x/bf/a7/c3/bfa7c3e82e928c5d65c4b823692de598.jpg")
+    url("9.JPEG")
     no-repeat center center;
   background-size: cover;
   height: 100vh; /* Tinggi banner sama dengan tinggi viewport */
@@ -213,7 +213,7 @@ a.social {
 }
 
 .container {
-  padding: 20px;
+  padding: 5px;
   text-align: center;
 }
 
@@ -382,4 +382,35 @@ a.social {
   height: 300px;
   border-radius: 8px;
   border: none;
+}
+
+#About-us {
+  background-image: url('10.png'); /* Ganti dengan gambar wallpaper untuk About Us */
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 50px 0; /* Menambahkan padding untuk ruang yang cukup */
+}
+
+/* Background untuk Keluhan Anda */
+#Keluhan-Anda {
+  background-color: #333; /* Ganti dengan warna yang diinginkan (misalnya biru) */
+  color: white; /* Warna teks putih agar kontras dengan latar belakang */
+  padding: 50px 0;
+}
+
+/* Background untuk FAQ */
+#FAQ {
+  background-image: url('10.png'); /* Ganti dengan gambar wallpaper untuk About Us */
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 50px 0; /* Menambahkan padding untuk ruang yang cukup */
+}
+
+/* Background untuk Price List */
+#Price-List {
+  background-color: #333; /* Ganti dengan warna yang diinginkan (misalnya hijau) */
+  color: white; /* Warna teks putih agar kontras dengan latar belakang */
+  padding: 50px 0;
 }
