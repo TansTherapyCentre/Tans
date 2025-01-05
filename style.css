@@ -1,3 +1,4 @@
+/* Mengatur margin, padding, dan box-sizing */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +7,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.4;
+  line-height: 1.6;
   padding-top: 56px; /* Menyesuaikan dengan navbar fixed-top */
 }
 
@@ -31,20 +32,16 @@ body {
 }
 
 .banner {
-  background: linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ), /* Overlay transparan untuk teks */
-    url("9.JPEG")
-    no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("9.JPEG") no-repeat center center;
   background-size: cover;
   height: 100vh; /* Tinggi banner sama dengan tinggi viewport */
   color: #ffffff;
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Posisikan teks di tengah vertikal */
-  align-items: center; /* Posisikan teks di tengah horizontal */
+  justify-content: center;
+  align-items: center;
 }
 
 .banner h4 {
@@ -401,7 +398,7 @@ a.social {
 
 /* Background untuk FAQ */
 #FAQ {
-  background-image: url('10.png'); /* Ganti dengan gambar wallpaper untuk About Us */
+  background-image: url('10.png'); /* Ganti dengan gambar wallpaper untuk FAQ */
   background-size: 70%;
   background-repeat: no-repeat;
   background-position: center center;
@@ -413,4 +410,29 @@ a.social {
   background-color: #333; /* Ganti dengan warna yang diinginkan (misalnya hijau) */
   color: white; /* Warna teks putih agar kontras dengan latar belakang */
   padding: 50px 0;
+}
+
+.d-flex {
+  display: flex;
+  flex-direction: column; /* Default untuk layar kecil (mobile) */
+  align-items: center; /* Pastikan konten berada di tengah secara horizontal */
+  justify-content: center; /* Pastikan konten berada di tengah secara vertikal */
+  min-height: 0vh; /* Membuat elemen memenuhi tinggi layar */
+}
+
+@media (min-width: 768px) {
+  .d-flex {
+    flex-direction: row; /* Berubah menjadi baris untuk layar besar */
+    align-items: center; /* Konten tetap vertikal tengah */
+  }
+}
+
+html, body {
+  overflow-x: hidden; /* Menyembunyikan scroll horizontal */
+}
+
+.scroll-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 20px 0;
 }
