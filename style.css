@@ -31,61 +31,32 @@ body {
   color: #ccc;
 }
 
+/* Style umum untuk banner */
 .banner {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("9.JPEG") no-repeat center center;
-  background-size: cover;
-  height: 100vh; /* Tinggi banner sama dengan tinggi viewport */
-  color: #ffffff;
+  width: 100%;
+  height: auto;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  background-color: #f5f5f5; /* Tambahan latar belakang (opsional) */
+  padding: 0; /* Hapus padding jika tidak dibutuhkan */
+  overflow: hidden; /* Pastikan tidak ada elemen keluar area */
 }
 
-.banner h4 {
-  font-size: 3rem;
-  margin: 0 0 10px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+.banner img {
+  max-width: 100%;
+  height: auto;
 }
 
-.banner h3 {
-  font-size: 1.5rem;
-  margin: 0;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-}
-
-.banner a {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 2px solid #ffffff;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.banner a:hover {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-/* Media Query untuk layar kecil */
+/* Media query untuk perangkat kecil (mobile view) */
 @media (max-width: 768px) {
   .banner {
-    padding: 20% 0; /* Padding lebih besar untuk layar kecil */
-    background-position: top; /* Fokus pada bagian atas gambar */
+    padding: 0; /* Tetap tanpa padding */
   }
+}
 
-  .banner h4 {
-    font-size: 2rem; /* Ukuran teks lebih kecil */
-  }
-
-  .banner h3 {
-    font-size: 1.2rem;
+/* Media query untuk perangkat yang lebih kecil (toolbar view) */
+@media (max-width: 480px) {
+  .banner {
+    padding: 0; /* Tetap tanpa padding */
   }
 }
 
@@ -139,75 +110,100 @@ a.social {
   text-align: center;
 }
 
+.container-fluid {
+  padding: 50px 0;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
 .faq-container {
   display: flex;
-  flex-wrap: wrap;
-  position: relative;
-  width: 90%;
-  max-width: 1400px;
-  background-color: white;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  border: 5px solid #800000; /* Border luar container */
   border-radius: 10px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  padding: 20px;
-  margin: 20px auto;
+  overflow: hidden; /* Untuk menjaga elemen di dalam tetap di dalam border */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* Pusatkan container */
+  background-color: white; /* Pastikan area putih mencakup seluruh container */
 }
 
 .faq-buttons {
-  background-color: #8b0000;
-  color: white;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  border-radius: 10px 0 0 10px;
+  background-color: #800000; /* Warna merah gelap */
+  padding: 20px;
+  box-shadow: none; /* Menghapus shadow karena sudah ada border luar */
+  flex: 1; /* Atur proporsi lebar */
 }
 
 .faq-buttons button {
   background-color: white;
-  color: #8b0000;
-  border: none;
-  padding: 15px 20px;
-  text-align: left;
+  color: #800000;
+  border: 2px solid #800000;
+  border-radius: 50px;
+  padding: 10px 20px;
   font-size: 16px;
-  border-radius: 30px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .faq-buttons button:hover {
-  background-color: #8b0000;
+  background-color: #800000;
   color: white;
 }
 
 .faq-answer {
-  flex-grow: 1;
-  padding: 30px;
+  background-color: white;
+  padding: 20px;
+  flex: 2; /* Atur proporsi lebih besar untuk jawaban */
+  min-width: 0; /* Hindari elemen melebihi ruang tersedia */
+  border-left: 2px solid #800000; /* Garis pemisah dengan tombol */
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
+  align-items: center; /* Pusatkan secara vertikal */
+  justify-content: center; /* Pusatkan secara horizontal */
 }
 
-#answer-text {
-  font-size: 20px;
-  line-height: 1.8;
+.faq-answer p {
+  margin: 0;
+  font-size: 1rem;
   color: #333;
+  text-align: center; /* Pusatkan teks di desktop */
 }
 
-.faq-label {
-  position: absolute;
-  right: 30px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 56px;
-  font-weight: bold;
-  color: #d3d3d3;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  opacity: 0.4;
-  user-select: none;
+@media (max-width: 768px) {
+  .faq-container {
+    flex-direction: column; /* Susunan kolom untuk mobile */
+    text-align: center;
+    border: none; /* Hilangkan border pada mode mobile */
+  }
+
+  .faq-answer {
+    order: -1; /* Tempatkan jawaban di atas tombol */
+    margin-bottom: 10px; /* Tambahkan jarak bawah */
+    border-left: none;
+    justify-content: flex-start; /* Pastikan teks berada di atas untuk mobile */
+    align-items: flex-start; /* Pastikan teks berada di atas untuk mobile */
+    text-align: center; /* Teks rata kiri di mobile */
+  }
+
+  .faq-answer p {
+    text-align: center; /* Teks tetap rata kiri untuk mobile */
+  }
+
+  .faq-buttons {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 2px solid #800000; /* Garis pemisah di bawah tombol */
+  }
 }
+
 
 .container {
   padding: 5px;
@@ -435,4 +431,31 @@ html, body {
   overflow-x: auto;
   white-space: nowrap;
   padding: 20px 0;
+}
+
+/* Container utama untuk ikon */
+.client {
+  background-color: #f9f9f9; /* Warna latar belakang (opsional) */
+}
+
+/* Mengatur tata letak ikon */
+.client .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Jarak antar ikon */
+}
+
+/* Mengatur ukuran ikon */
+.client .col img {
+  width: 50px; /* Lebar seragam ikon */
+  height: 50px; /* Tinggi seragam ikon */
+  object-fit: contain; /* Memastikan gambar tidak terdistorsi */
+  transition: transform 0.3s ease-in-out; /* Efek transisi saat hover */
+}
+
+/* Efek hover pada ikon */
+.client .col img:hover {
+  transform: scale(1.1); /* Ikon akan membesar sedikit saat di-hover */
+  cursor: pointer;
 }
