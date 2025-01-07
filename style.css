@@ -16,7 +16,7 @@ body {
   top: 0;
   width: 100%;
   z-index: 1030;
-  background-color: #333;
+  background-color: #445d23;
   color: #fff;
   padding: 10px;
 }
@@ -117,6 +117,7 @@ a.social {
 h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
+  color: #000000;
 }
 
 .faq-container {
@@ -124,7 +125,7 @@ h2 {
   flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
-  border: 5px solid #800000; /* Border luar container */
+  border: 5px solid #000000; /* Border luar container */
   border-radius: 10px;
   overflow: hidden; /* Untuk menjaga elemen di dalam tetap di dalam border */
   width: 100%;
@@ -137,7 +138,7 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background-color: #800000; /* Warna merah gelap */
+  background-color: #ffffff; /* Warna merah gelap */
   padding: 20px;
   box-shadow: none; /* Menghapus shadow karena sudah ada border luar */
   flex: 1; /* Atur proporsi lebar */
@@ -145,8 +146,8 @@ h2 {
 
 .faq-buttons button {
   background-color: white;
-  color: #800000;
-  border: 2px solid #800000;
+  color: #13b466;
+  border: 2px solid #13b466;
   border-radius: 50px;
   padding: 10px 20px;
   font-size: 16px;
@@ -155,7 +156,7 @@ h2 {
 }
 
 .faq-buttons button:hover {
-  background-color: #800000;
+  background-color: #13b466;
   color: white;
 }
 
@@ -164,7 +165,7 @@ h2 {
   padding: 20px;
   flex: 2; /* Atur proporsi lebih besar untuk jawaban */
   min-width: 0; /* Hindari elemen melebihi ruang tersedia */
-  border-left: 2px solid #800000; /* Garis pemisah dengan tombol */
+  border-left: 2px solid #ffffff; /* Garis pemisah dengan tombol */
   display: flex;
   align-items: center; /* Pusatkan secara vertikal */
   justify-content: center; /* Pusatkan secara horizontal */
@@ -200,7 +201,7 @@ h2 {
   .faq-buttons {
     width: 100%;
     padding: 10px;
-    border-bottom: 2px solid #800000; /* Garis pemisah di bawah tombol */
+    border-bottom: 2px solid #13b466; /* Garis pemisah di bawah tombol */
   }
 }
 
@@ -387,7 +388,7 @@ h2 {
 
 /* Background untuk Keluhan Anda */
 #Keluhan-Anda {
-  background-color: #333; /* Ganti dengan warna yang diinginkan (misalnya biru) */
+  background-color: #13b466; /* Ganti dengan warna yang diinginkan (misalnya biru) */
   color: white; /* Warna teks putih agar kontras dengan latar belakang */
   padding: 50px 0;
 }
@@ -403,7 +404,7 @@ h2 {
 
 /* Background untuk Price List */
 #Price-List {
-  background-color: #333; /* Ganti dengan warna yang diinginkan (misalnya hijau) */
+  background-color: #13b466; /* Ganti dengan warna yang diinginkan (misalnya hijau) */
   color: white; /* Warna teks putih agar kontras dengan latar belakang */
   padding: 50px 0;
 }
@@ -435,27 +436,72 @@ html, body {
 
 /* Container utama untuk ikon */
 .client {
-  background-color: #f9f9f9; /* Warna latar belakang (opsional) */
+    background-color: #f9f9f9; /* Warna latar belakang (opsional) */
 }
 
 /* Mengatur tata letak ikon */
 .client .row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px; /* Jarak antar ikon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Jarak antar ikon */
 }
 
 /* Mengatur ukuran ikon */
 .client .col img {
-  width: 50px; /* Lebar seragam ikon */
-  height: 50px; /* Tinggi seragam ikon */
-  object-fit: contain; /* Memastikan gambar tidak terdistorsi */
-  transition: transform 0.3s ease-in-out; /* Efek transisi saat hover */
+    width: 50px; /* Lebar seragam ikon */
+    height: 50px; /* Tinggi seragam ikon */
+    object-fit: contain; /* Memastikan gambar tidak terdistorsi */
+    transition: transform 0.3s ease-in-out; /* Efek transisi saat hover */
 }
 
 /* Efek hover pada ikon */
 .client .col img:hover {
-  transform: scale(1.1); /* Ikon akan membesar sedikit saat di-hover */
-  cursor: pointer;
+    transform: scale(1.1); /* Ikon akan membesar sedikit saat di-hover */
+    cursor: pointer;
+}
+
+/* Membuat container khusus */
+.my-container {
+  max-width: 1200px;
+  margin: 50px auto; /* Tambahkan margin-top untuk memberi jarak */
+  padding: 20px;
+  background-color: #13b466;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Styling untuk judul */
+h1 {
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* Grid untuk menampilkan profile-card */
+.client-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/* Gaya setiap profile-card */
+.profile-card {
+  text-align: center;
+  margin: 10px;
+}
+
+/* Gaya untuk gambar profil profile-card */
+.profile-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #b51f1f;
+}
+
+/* Nama profile-card */
+.profile-card h3 {
+  margin-top: 10px;
+  color: #fff;
 }
