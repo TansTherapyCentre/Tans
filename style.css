@@ -146,8 +146,8 @@ h2 {
 
 .faq-buttons button {
   background-color: white;
-  color: #13b466;
-  border: 2px solid #13b466;
+  color: #445d23;
+  border: 2px solid #445d23;
   border-radius: 50px;
   padding: 10px 20px;
   font-size: 16px;
@@ -156,7 +156,7 @@ h2 {
 }
 
 .faq-buttons button:hover {
-  background-color: #13b466;
+  background-color: #445d23;
   color: white;
 }
 
@@ -176,6 +176,10 @@ h2 {
   font-size: 1rem;
   color: #333;
   text-align: center; /* Pusatkan teks di desktop */
+}
+
+#answer-text {
+  white-space: pre-line;
 }
 
 @media (max-width: 768px) {
@@ -201,7 +205,11 @@ h2 {
   .faq-buttons {
     width: 100%;
     padding: 10px;
-    border-bottom: 2px solid #13b466; /* Garis pemisah di bawah tombol */
+    border-bottom: 2px solid #445d23; /* Garis pemisah di bawah tombol */
+  }
+
+  #answer-text {
+    white-space: pre-line;
   }
 }
 
@@ -355,7 +363,7 @@ h2 {
 }
 
 .button:hover {
-  background-color: #128C7E;
+  background-color: #445d23;
 }
 
 .location-container {
@@ -419,14 +427,14 @@ h2 {
 
 /* Background untuk Keluhan Anda */
 #Keluhan-Anda {
-  background-color: #13b466; /* Ganti dengan warna yang diinginkan (misalnya biru) */
+  background-color: #445d23; /* Ganti dengan warna yang diinginkan (misalnya biru) */
   color: white; /* Warna teks putih agar kontras dengan latar belakang */
   padding: 50px 0;
 }
 
 /* Background untuk Price List */
 #Price-List {
-  background-color: #13b466; /* Ganti dengan warna yang diinginkan (misalnya hijau) */
+  background-color: #445d23; /* Ganti dengan warna yang diinginkan (misalnya hijau) */
   color: white; /* Warna teks putih agar kontras dengan latar belakang */
   padding: 50px 0;
 }
@@ -521,7 +529,7 @@ html, body {
 .swiper-slide-active img {
   width: 300px; /* Ukuran gambar lebih besar pada slide aktif */
   height: 300px;
-  border: 5px solid #13b466; /* Border hijau untuk gambar aktif */
+  border: 5px solid #445d23; /* Border hijau untuk gambar aktif */
 }
 
 .swiper-slide-active {
@@ -576,5 +584,22 @@ html, body {
   z-index: -1; /* Memastikan gambar blur di belakang konten */
 }
 
+.very-bold {
+  font-family: 'Anton', sans-serif;
+  font-weight: 900;
+  font-size: 48px;
+  letter-spacing: 2px;
+  color: #000;
+}
 
+/* Responsif untuk mobile */
+@media (max-width: 768px) {
+  .very-bold {
+    font-family: 'Anton', sans-serif;
+    font-weight: 800;
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: #000;
+  }
+}
 
