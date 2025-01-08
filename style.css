@@ -205,6 +205,25 @@ h2 {
   }
 }
 
+#FAQ {
+  position: relative;
+  padding: 60px 0;
+}
+
+#FAQ::before {
+  content: "";
+  background-image: url('24.jpeg'); /* Ganti dengan gambar wallpaper untuk About Us */
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter: blur(10px); /* Menambahkan efek blur */
+  z-index: -1; /* Memastikan gambar blur di belakang konten */
+}
 
 .container {
   padding: 5px;
@@ -379,11 +398,23 @@ h2 {
 }
 
 #About-us {
-  background-image: url('10.png'); /* Ganti dengan gambar wallpaper untuk About Us */
-  background-size: 80%;
+  position: relative;
+  padding: 60px 0;
+}
+
+#About-us::before {
+  content: "";
+  background-image: url('24.jpeg'); /* Ganti dengan gambar wallpaper untuk About Us */
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: center center;
-  padding: 50px 0; /* Menambahkan padding untuk ruang yang cukup */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter: blur(10px); /* Menambahkan efek blur */
+  z-index: -1; /* Memastikan gambar blur di belakang konten */
 }
 
 /* Background untuk Keluhan Anda */
@@ -391,15 +422,6 @@ h2 {
   background-color: #13b466; /* Ganti dengan warna yang diinginkan (misalnya biru) */
   color: white; /* Warna teks putih agar kontras dengan latar belakang */
   padding: 50px 0;
-}
-
-/* Background untuk FAQ */
-#FAQ {
-  background-image: url('10.png'); /* Ganti dengan gambar wallpaper untuk FAQ */
-  background-size: 70%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  padding: 50px 0; /* Menambahkan padding untuk ruang yang cukup */
 }
 
 /* Background untuk Price List */
@@ -436,7 +458,7 @@ html, body {
 
 /* Container utama untuk ikon */
 .client {
-    background-color: #f9f9f9; /* Warna latar belakang (opsional) */
+    background-color: #445d23; /* Warna latar belakang (opsional) */
 }
 
 /* Mengatur tata letak ikon */
@@ -455,53 +477,104 @@ html, body {
     transition: transform 0.3s ease-in-out; /* Efek transisi saat hover */
 }
 
-/* Efek hover pada ikon */
-.client .col img:hover {
-    transform: scale(1.1); /* Ikon akan membesar sedikit saat di-hover */
-    cursor: pointer;
+/* Style dasar untuk desktop (ukuran besar) */
+.swiper-container {
+  width: 40%;
+  max-width: 1100px; /* Membatasi lebar maksimal kontainer */
+  margin: 0 auto; /* Memusatkan slider */
+  overflow: visible; /* Membiarkan overflow terlihat */
 }
 
-/* Membuat container khusus */
-.my-container {
-  max-width: 1200px;
-  margin: 50px auto; /* Tambahkan margin-top untuk memberi jarak */
-  padding: 20px;
-  background-color: #13b466;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-
-/* Styling untuk judul */
-h1 {
-  margin-bottom: 30px;
-  color: #fff;
-}
-
-/* Grid untuk menampilkan profile-card */
-.client-grid {
+.swiper-wrapper {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  align-items: center; /* Membuat elemen tetap terpusat secara vertikal */
 }
 
-/* Gaya setiap profile-card */
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* Mengurangi padding antar elemen agar lebih rapat */
+  margin: 0; /* Mengurangi margin antar elemen */
+}
+
 .profile-card {
   text-align: center;
-  margin: 10px;
 }
 
-/* Gaya untuk gambar profil profile-card */
 .profile-card img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+  width: 200px; /* Ukuran gambar untuk desktop */
+  height: 200px;
+  border-radius: 50%; /* Membuat gambar bulat */
   object-fit: cover;
-  border: 5px solid #b51f1f;
+  border: 5px solid #ffffff; /* Border putih untuk gambar */
+  margin-bottom: 8px; /* Mengurangi margin bawah gambar */
 }
 
-/* Nama profile-card */
 .profile-card h3 {
-  margin-top: 10px;
-  color: #fff;
+  margin: 0;
+  font-size: 20px; /* Ukuran font untuk desktop */
+  color: #000000; /* Agar teks terlihat jelas */
 }
+
+.swiper-slide-active img {
+  width: 300px; /* Ukuran gambar lebih besar pada slide aktif */
+  height: 300px;
+  border: 5px solid #13b466; /* Border hijau untuk gambar aktif */
+}
+
+.swiper-slide-active {
+  transform: scale(1.1); /* Memperbesar gambar aktif */
+}
+
+/* Responsif untuk mobile */
+@media (max-width: 768px) {
+  .swiper-container {
+    width: 90%; /* Lebar slider lebih besar pada mobile */
+    max-width: 100%; /* Memastikan lebar maksimal 100% */
+  }
+
+  .profile-card img {
+    width: 150px; /* Ukuran gambar lebih kecil untuk mobile */
+    height: 150px;
+    margin-bottom: 5px;
+  }
+
+  .profile-card h3 {
+    font-size: 12px; /* Ukuran font lebih kecil untuk mobile */
+  }
+
+  .swiper-slide-active img {
+    width: 200px; /* Gambar aktif lebih kecil untuk mobile */
+    height: 200px;
+  }
+
+  .swiper-slide-active {
+    transform: scale(1.05); /* Sedikit memperbesar gambar aktif pada mobile */
+  }
+}
+
+
+#Our-Client {
+  position: relative;
+  padding: 60px 0;
+}
+
+#Our-Client::before {
+  content: "";
+  background-image: url('24.jpeg'); /* Ganti dengan gambar wallpaper untuk About Us */
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter: blur(10px); /* Menambahkan efek blur */
+  z-index: -1; /* Memastikan gambar blur di belakang konten */
+}
+
+
+
