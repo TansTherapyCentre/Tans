@@ -479,7 +479,7 @@ html, body {
 
 /* Style dasar untuk desktop (ukuran besar) */
 .swiper-container {
-  width: 40%;
+  width: 35%;
   max-width: 1100px; /* Membatasi lebar maksimal kontainer */
   margin: 0 auto; /* Memusatkan slider */
   overflow: visible; /* Membiarkan overflow terlihat */
@@ -531,13 +531,13 @@ html, body {
 /* Responsif untuk mobile */
 @media (max-width: 768px) {
   .swiper-container {
-    width: 90%; /* Lebar slider lebih besar pada mobile */
+    width: 100%; /* Lebar slider lebih besar pada mobile */
     max-width: 100%; /* Memastikan lebar maksimal 100% */
   }
 
   .profile-card img {
-    width: 150px; /* Ukuran gambar lebih kecil untuk mobile */
-    height: 150px;
+    width: 100px; /* Ukuran gambar lebih kecil untuk mobile */
+    height: 100px;
     margin-bottom: 5px;
   }
 
