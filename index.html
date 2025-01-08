@@ -18,6 +18,7 @@
       crossorigin="anonymous"
     />
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -98,7 +99,7 @@
     <!-- layanan -->
     <div class="container-fluid pt-5 pb-5" id="Keluhan-Anda">
       <div class="container text-center">
-        <h1 class="display-3 text-decoration-underline">Apa keluhan anda</h1>
+        <h1 class="display-3">Apa keluhan anda</h1>
         <div class="row pt-4">
           <div class="col-md-4">
             <span class="fa-6x"><img src="1.png" style="width: 150px; height: auto;" /></span>
@@ -154,9 +155,9 @@
       </div>
     </div>
     <!-- portofolio -->
-    <div class="container-fluid pt-5 pb-5 bg-light" id="FAQ">
+    <div class="container-fluid pt-5 pb-5" id="FAQ">
       <div class="container text-center">
-        <h2 class="display-3 text-decoration-underline">Frequently Asked Question</h2>
+        <h2 class="display-3">FAQ</h2>
         <div class="faq-container">
           <div class="faq-buttons">
               <button onclick="showAnswer(0)">Lokasi di mana?</button>
@@ -171,7 +172,6 @@
               <p></p>
           </div>
       </div>
-      <script src="script.js"></script>
     </p>
               </div>
             </div>
@@ -179,6 +179,7 @@
         </div>
       </div>
     </div>
+    <script src="script.js"></script>
     <!-- tim -->
     <div class="container-fluid pt-5 pb-5" id="Price-List">
       <div class="container text-center">
@@ -211,42 +212,49 @@
             </div>
           </div>
           <link rel="stylesheet" href="style.css">
-        </div>
-      </div>
-    </div>
-    <script>
+    
+          <script>
             function navigateTo(service) {
               window.location.href = `bookappointment/index.html?service=${service}`;
             }
           </script>
+        </div>
+      </div>
+    </div>
     <!-- client -->
-    <div class="container-fluid pt-5 pb-5 bg-light" id="Our Client">
-    <div class="my-container">
-      <h1>Our Client</h1>
-      <div class="client-grid">
-          <div class="profile-card">
-              <img src="19.png" alt="Andra Bagindas">
-              <h3>Andra Bagindas</h3>
-          </div>
-          <div class="profile-card">
-              <img src="20.png" alt="Wendy Bagindas">
-              <h3>Wendy Bagindas</h3>
-          </div>
-          <div class="profile-card">
-              <img src="21.png" alt="Riri Leksono">
-              <h3>Riri Leksono</h3>
-          </div>
-          <div class="profile-card">
-              <img src="22.png" alt="Ragil Bagindas">
-              <h3>Ragil Bagindas</h3>
-          </div>
-          <div class="profile-card">
-              <img src="23.png" alt="Jl Karim">
-              <h3>Jl Karim</h3>
+    <div class="container-fluid" id="Our-Client">
+      <div class="my-container">
+          <h1>Our Client</h1>
+          <div class="swiper-container">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide profile-card">
+                      <img src="19.png" alt="Andra Bagindas">
+                      <h3>Andra Bagindas</h3>
+                  </div>
+                  <div class="swiper-slide profile-card">
+                      <img src="20.png" alt="Wendy Bagindas">
+                      <h3>Wendy Bagindas</h3>
+                  </div>
+                  <div class="swiper-slide profile-card">
+                      <img src="21.png" alt="Riri Leksono">
+                      <h3>Riri Leksono</h3>
+                  </div>
+                  <div class="swiper-slide profile-card">
+                      <img src="22.png" alt="Ragil Bagindas">
+                      <h3>Ragil Bagindas</h3>
+                  </div>
+                  <div class="swiper-slide profile-card">
+                      <img src="23.png" alt="H. Karimullah Dahrujiadi">
+                      <h3>H. Karimullah Dahrujiadi</h3>
+                  </div>
+              </div>
           </div>
       </div>
   </div>
-    </div>
+  
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="script1.js"></script>
     <!-- maps -->
     <div class="location-container">
       <div class="address">
@@ -278,7 +286,7 @@
           </div>
           <div class="col">
             <a href="https://www.facebook.com/profile.php?id=61556358546631&mibextid=ZbWKwL" target="_blank">
-              <img src="17.jpg" alt="Facebook" />
+              <img src="17.png" alt="Facebook" />
             </a>
           </div>
           <div class="col">
